@@ -9,18 +9,21 @@ let cron = undefined
 
 function start() {
     cron = setInterval(timer, tempo)
+    document.getElementById('counter').style.color = '#4EEE94'
 }
 
 function pause() {
     clearInterval(cron)
+    document.getElementById('counter').style.color = '#8B8386'
 }
 
-function stop() {
+function stopp() {
     clearInterval(cron)
     hora = 0
     minuto = 0
-    segundo = 0
-    document.getElementById('counter').innerHTML = '00:00:00'
+    segundo = 0 
+    document.getElementById('counter').innerText = '00:00:00';
+    document.getElementById('counter').style.color = 'black'
 }
 
 function timer() {
